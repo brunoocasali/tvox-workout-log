@@ -1,4 +1,10 @@
-## Front End - Test
+# WORKOUT LOG
+
+
+### Technologies:
+
+ - GIMP: Used to make the logo.
+ - 
 
 ### Used Resources:
 
