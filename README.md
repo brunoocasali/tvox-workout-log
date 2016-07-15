@@ -5,9 +5,10 @@
 ### Technologies:
 
  - GIMP: Used to make the logo.
- - 
+ - Stamplay: To host the app, and create api. 
 
 ### Used Resources:
 
  - https://codyhouse.co/gem/vertical-timeline/ (timeline base)
  - http://www.dafont.com/pt/gobold.font (fontface logo)
+ - https://nucleoapp.com/premium-colored-icons/ (icons)
