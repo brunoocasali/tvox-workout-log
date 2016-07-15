@@ -1,0 +1,10 @@
+{
+  "appId": "trustvox-workoutapp",
+  "apiKey": "9103d20433db500a99a8c2ea62a098b57763f156b3d093d6be5838251d2f3261",
+  "public": "./",
+  "ignore": [
+    "stamplay.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
