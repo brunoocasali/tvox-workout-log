@@ -8,9 +8,10 @@
 
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="css/modal.css"> <!-- Resource style -->
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
   	
-	<title>Responsive Vertical Timeline</title>
+	<title>WORKOUT LOG</title>
 </head>
 <body>
 	<header>
@@ -18,11 +19,11 @@
 	</header>
 
 	<div class="fixed-fab">
-		<button class="fab">+</button>
+		<button class="fab" id="myBtn">+</button>
 	</div>
 
 	<section class="cd-container">
-		<form >
+		<form class="form">
 			<label>Spent:</label>
 			<input type="number" name="">
 
@@ -36,6 +37,18 @@
 			</select>
 		</form>
 	</section>
+
+
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+
+	  <!-- Modal content -->
+	  <div class="modal-content">
+	    <span class="close">x</span>
+	    <p>Some text in the Modal..</p>
+	  </div>
+
+	</div>
 
 	<section id="cd-timeline" class="cd-container">
 		<!-- SWIMMING -->
@@ -176,5 +189,6 @@
 	</section>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
+<script src="js/modal.js"></script> <!-- Resource jQuery -->
 </body>
 </html>
