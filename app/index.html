@@ -6,10 +6,16 @@
 
 	<link href='http://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700' rel='stylesheet' type='text/css'>
 
-	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
-	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
-	<link rel="stylesheet" href="css/modal.css"> <!-- Resource style -->
-	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+	<!-- CSS reset -->	
+	<link rel="stylesheet" href="css/reset.css" /> 
+	<!-- Resource style -->
+	<link rel="stylesheet" href="css/style.css" /> 
+	<link rel="stylesheet" href="css/modal.css" />
+	<link rel="stylesheet" href="css/form.css" />
+	<link rel="stylesheet" href="css/flickity.min.css" />
+	<link rel="stylesheet" href="css/image-picker.css" />
+	<!-- Modernizr -->
+	<script src="js/modernizr.js"></script>
   	
 	<title>WORKOUT LOG</title>
 </head>
@@ -22,30 +28,32 @@
 		<button class="fab" id="myBtn">+</button>
 	</div>
 
-	<section class="cd-container">
-		<form class="form">
-			<label>Spent:</label>
-			<input type="number" name="">
-
-			<label>When:</label>
-			<input type="date" name="">
-
-			<label>Kind:</label>
-			<select>
-				<option>Swimming</option>
-				<option>Bike</option>
-			</select>
-		</form>
-	</section>
-
-
-	<!-- The Modal -->
-	<div id="myModal" class="modal">
+ 	<!-- The Modal -->
+	<div id="modal" class="modal">
 
 	  <!-- Modal content -->
 	  <div class="modal-content">
-	    <span class="close">x</span>
-	    <p>Some text in the Modal..</p>
+	    <span class="close">&times;</span>
+	    <form class="form">
+			<label for="spent_time">Spent:</label>
+			<input type="number" name="spent_time" required="required" min="0">
+
+			<label for="when">When:</label>
+			<input type="date" name="when">
+
+			<label for="sport_type">Kind:</label>
+
+			<select name="sport_type" class="image-picker">
+   			    <option data-img-src="img/swimming.png" value="1">Swimming</option>
+   			    <option data-img-src="img/swimming.png" value="5">Swimming</option>
+   			    <option data-img-src="img/swimming.png" value="8">Swimming</option>
+   			    <option data-img-src="img/bike.png" value="9">Bike</option>
+   			    <option data-img-src="img/bike.png" value="3542">Bike</option>
+   			    <option data-img-src="img/bike.png" value="212">Bike</option>
+   			    <option data-img-src="img/bike.png" value="22">Bike</option>
+   			    <option data-img-src="img/sex.png" value="3">Sexo</option>
+			</select>
+		</form>
 	  </div>
 
 	</div>
@@ -187,8 +195,15 @@
 		</div>
 		<!-- /SUPINE -->
 	</section>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="js/main.js"></script> <!-- Resource jQuery -->
-<script src="js/modal.js"></script> <!-- Resource jQuery -->
+	
+	<!-- Resource jQuery -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	
+	<!-- Javascript Resources -->
+	<script src="js/main.js"></script> 
+	<script src="js/modal.js"></script>
+	<script src="js/image-picker.min.js"></script>
+	<script src="js/flickity.pkgd.min.js"></script>
+	<script src="js/init.js"></script>
 </body>
 </html>

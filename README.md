@@ -12,3 +12,7 @@
  - https://codyhouse.co/gem/vertical-timeline/ (timeline base)
  - http://www.dafont.com/pt/gobold.font (fontface logo)
  - https://icons8.com/ (icons)
+ - http://sixrevisions.com/css/fixed-navigation-bar/ (navbar base)
+ - http://www.w3schools.com/css/css_form.asp (forms base)
+ - http://flickity.metafizzy.co (slider in select)
+ - https://rvera.github.io/image-picker/ (image picker style)
