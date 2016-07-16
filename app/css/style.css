@@ -110,7 +110,7 @@ header h1 {
 
 .spent-hour {
   font-family: "Open Sans", sans-serif;
-  font-style: light;
+  float: right;
 }
 
 .cd-timeline-block {
@@ -162,14 +162,29 @@ header h1 {
   margin-left: -12px;
   margin-top: -12px;
 }
-.cd-timeline-img.cd-picture {
+.cd-timeline-img.cd-swimming {
   background: #0fb9ec;
 }
-.cd-timeline-img.cd-movie {
+.cd-timeline-img.cd-sex {
+  background: #ff76e5;
+}
+.cd-timeline-img.cd-bike {
   background: #c03b44;
 }
-.cd-timeline-img.cd-location {
+.cd-timeline-img.cd-football {
+  background: #309407;
+}
+.cd-timeline-img.cd-running {
   background: #f0ca45;
+}
+.cd-timeline-img.cd-wrestling {
+  background: #000000;
+}
+.cd-timeline-img.cd-yoga {
+  background: #e8e123;
+}
+.cd-timeline-img.cd-supine {
+  background: gray;
 }
 
 @media only screen and (min-width: 1170px) {
