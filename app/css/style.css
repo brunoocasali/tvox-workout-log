@@ -61,7 +61,7 @@ Main components
 -------------------------------- */
 header {
   height: 200px;
-  line-height: 200px;
+  line-height: 300px;
   text-align: center;
   background: #303e49;
 }
@@ -71,10 +71,6 @@ header h1 {
   font-size: 1.125rem;
 }
 @media only screen and (min-width: 1170px) {
-  header {
-    height: 300px;
-    line-height: 300px;
-  }
   header h1 {
     font-size: 24px;
     font-size: 1.5rem;
@@ -187,7 +183,43 @@ header h1 {
   background: gray;
 }
 
+.fixed-fab {
+  bottom: 18px;
+  right: 10px;
+  position: fixed;
+  padding-top: 15px;
+  margin-bottom: 0;
+  z-index: 998;
+}
+
+.fab {
+  background-color:#F44336;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  background: #F44336;
+  border: none;
+  outline: none;
+  color: #FFF;
+  font-size: 36px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  transition:.3s;  
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.fab:hover{
+  transform:scale(1.1);
+  transform:rotate(45deg);
+  -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+@media screen and (min-width: 401px) {
+  .fixed-fab { display: initial; }
+}
+
 @media only screen and (min-width: 1170px) {
+  .fixed-fab { display: none; }
+
   .cd-timeline-img {
     width: 60px;
     height: 60px;
