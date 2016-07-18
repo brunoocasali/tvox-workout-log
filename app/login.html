@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="https://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700" rel="stylesheet" type="text/css">
+
+	<!-- CSS reset -->	
+	<link rel="stylesheet" href="css/reset.css" /> 
+	<!-- Resource style -->
+	<link rel="stylesheet" href="css/style.css" /> 
+	<link rel="stylesheet" href="css/modal.css" />
+	<link rel="stylesheet" href="css/form.css" />
+	<link rel="stylesheet" href="css/image-picker.css" />
+
+	<!-- Modernizr -->
+	<script src="js/modernizr.js"></script>
+  	
+	<title>WORKOUT LOG</title>
+</head>
+<body>
+	<h2>LOGIN</h2>	
+	
+	<ul class="nav navbar-nav navbar-right" ng-show="currentUser.id">
+	  <li><a ui-sref="admin">Admin</a></li>
+	  <li><a ui-sref="profile">Profile</a></li>
+	  <li><a href="#">Logout</a></li>
+	</ul>
+
+	<!-- not logged in navigation -->
+	<ul class="nav navbar-nav navbar-right" ng-show="!currentUser.id">
+	    <li><a ui-sref="authenticate">Register</a></li>
+	    <li><a ui-sref="authenticate">Sign in</a></li>
+	</ul>
+
+	
+	<!-- Resource jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<script src="https://drrjhlchpvi7e.cloudfront.net/libs/stamplay-js-sdk/2.0.9/stamplay.min.js"></script>
+
+	<!-- Javascript Resources -->
+	<script src="js/main.js"></script> 
+	<script src="js/modal.js"></script>
+	<script src="js/image-picker.min.js"></script>
+	
+	<script src="js/init.js"></script>
+</body>
+</html>
