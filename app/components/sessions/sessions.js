@@ -4,16 +4,29 @@ angular
 
 function SessionsController(Session, User, $state, $rootScope) {
 	var sessions = this;
-	$rootScope.session = {};
 	var modal = document.getElementById('modal');
 
-	sessions.save = function() {
+	// bind the functions to our sessions
+	sessions.save = save;
+	sessions.destroy = destroy;
+
+	$rootScope.session = { when: new Date() };
+
+	function save() {
 		$rootScope.session.athlete = $rootScope.loggedUser.userId;
 
 		Session.create($rootScope.session).then(function(){
 			alert('Congratulations');
 			modal.style.display = "none";
 		});
+	};
+
+	function destroy(id){
+		Session.destroy(id).then(function(){
+			alert('Destroyed!');
+		});
+
+		$rootScope.$apply();
 	};
 
 	function load() {
@@ -24,8 +37,7 @@ function SessionsController(Session, User, $state, $rootScope) {
 
 		Session.all({id: $rootScope.loggedUser.userId })
 			.then(function(data) {
-				$rootScope.sessions = data;
-				console.log(data);
+				$rootScope.session_objects = data;
 			});
 	}
 

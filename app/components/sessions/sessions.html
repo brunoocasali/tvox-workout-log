@@ -31,7 +31,7 @@
 </div>
 
 <section id="cd-timeline" class="cd-container">
-	<div class="cd-timeline-block" ng-repeat="session in sessions">
+	<div class="cd-timeline-block" ng-repeat="session in session_objects track by $index">
 		<div class="cd-timeline-img cd-{{session.type[0].image}}">
 			<img src="app/img/{{session.type[0].image}}-white.png" alt="{{session.type[0].name}}">
 		</div>
@@ -39,7 +39,16 @@
 		<div class="cd-timeline-content">
 			<div class="element-text">
 				<span class="element-title">{{session.type[0].name}}</span>
-				<span class="spent-hour">{{session.time_spent}}h</span>
+				<span class="spent-hour">{{session.time_spent}}h 
+					<div class="dropdown">
+					  <a class="dropbtn" href="#">
+						<i class="fa fa-ellipsis-v" style="font-size: 0.8em; margin-left: 8px; color: gray;"></i>
+					  </a>
+					  <div class="dropdown-content">
+					    <a ng-click="sessions.destroy(session.id)">DESTROY</a> 
+					  </div>
+					</div>
+				</span>
 			</div>
 
 			<span class="cd-date">{{session.when | date:"dd 'of' MMMM, yyyy"}}</span>
@@ -47,7 +56,7 @@
 	</div>
 
 
-	<div ng-hide="!sessions.length" class="cd-timeline-block">
+	<div ng-hide="!session_objects.length" class="cd-timeline-block">
 		<div class="cd-timeline-content">
 			<span style="color: red">NOTHING MORE TO SHOW... #nopain #nogain</span>
 		</div>

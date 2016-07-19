@@ -12,7 +12,13 @@
   height: 50px;
   background-color: #00a087;
 }
-a[ui-sref]  { cursor:pointer; }
+
+a[ui-sref],
+a[ng-click],
+a[data-ng-click],
+a[x-ng-click] {
+    cursor: pointer;
+}
 
 /* The element at the top of the page right after the fixed navigation bar
    MUST have sufficient top margin or else it will be covered by the bar */
@@ -150,4 +156,49 @@ a[ui-sref]  { cursor:pointer; }
 
 .open-font {
   font-family: 'Open Sans', sans-serif;
+}
+
+
+/* ---------------- DROPDOWN BUTTON ---------------- */
+
+.dropbtn {
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    font-size: 16px;
+    padding: 6px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    font-size: 12px;
+    padding: 5px 8px;
+    text-decoration: none;
+    display: block;
+}
+
+@media only screen and (max-width: 800px) {
+  .dropdown-content {
+    left: -66px;
+    top: 26px;
+    font-size: 18px;
+  }
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    background-color: #cfd3d6;
+}
+
+.dropdown:hover .dropbtn {
+    color: gray;
 }

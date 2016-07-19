@@ -84,12 +84,15 @@ function SessionService($stamplay, $q, $http) {
 	function destroy(id) {
 		var q = $q.defer();
 	    
-	    $stamplay.Object("session").remove(id)
-	        .then(function(res) {
-	          q.resolve();
-	        }, function(err) {
-	          q.reject();
-	        })
+	    $stamplay.Object("session")
+		  .remove(id)
+		  .then(function(res) {
+		    q.resolve(res);
+		  }, function(err) {
+		  	alert('ERROR CODE ' + err.code + '. Message: ' + err.message);
+		    q.reject(err);
+		  });
+
 	    return q.promise;
 	}
 }
