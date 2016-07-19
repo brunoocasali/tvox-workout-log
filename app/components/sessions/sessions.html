@@ -9,8 +9,11 @@
   <div class="modal-content">
     <span class="close">&times;</span>
     <form class="form">
-		<label for="spent_time">Spent:</label>
-		<input type="number" name="spent_time" required="required" min="0">
+		<label for="spent_time">
+			Spent:<br>
+			<input type="number" name="spent_time" style="width: 80%" required="required" min="0">
+			hours <br>
+		</label>
 
 		<label for="when">When:</label>
 		<input type="date" name="when">
@@ -18,15 +21,17 @@
 		<label for="sport_type">Kind:</label>
 
 		<select name="sport_type" class="image-picker">
-			    <option data-img-src="app/img/swimming.png" value="1">Swimming</option>
-			    <option data-img-src="app/img/swimming.png" value="5">Swimming</option>
-			    <option data-img-src="app/img/swimming.png" value="8">Swimming</option>
-			    <option data-img-src="app/img/bike.png" value="9">Bike</option>
-			    <option data-img-src="app/img/bike.png" value="3542">Bike</option>
-			    <option data-img-src="app/img/bike.png" value="212">Bike</option>
-			    <option data-img-src="app/img/bike.png" value="22">Bike</option>
-			    <option data-img-src="app/img/sex.png" value="3">Sexo</option>
+		    <option data-img-src="app/img/swimming.png" value="1">Swimming</option>
+		    <option data-img-src="app/img/swimming.png" value="5">Swimming</option>
+		    <option data-img-src="app/img/swimming.png" value="8">Swimming</option>
+		    <option data-img-src="app/img/bike.png" value="9">Bike</option>
+		    <option data-img-src="app/img/bike.png" value="3542">Bike</option>
+		    <option data-img-src="app/img/bike.png" value="212">Bike</option>
+		    <option data-img-src="app/img/bike.png" value="22">Bike</option>
+		    <option data-img-src="app/img/sex.png" value="3">Sexo</option>
 		</select>
+
+		<button>Save</button>
 	</form>
   </div>
 

@@ -3,6 +3,8 @@ angular
 	.controller('SessionsController', ['Session', 'User', SessionsController]);
 
 function SessionsController(Session, User, $state) {
+	$('body').removeClass('bg');
+
 	var sessions = this;
 
 	Session.all()
