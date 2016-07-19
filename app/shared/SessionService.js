@@ -15,12 +15,12 @@ function SessionService($stamplay, $q, $http) {
 	/** 
 	 * Get all the sessions
 	 */
-	function all() {
+	function all(query) {
 		var q = $q.defer();
 
-		$stamplay.Object("session").get({
-			populate_owner : true
-		}).then(function(res) {
+		$stamplay.Object("session")
+		.get(query)
+		.then(function(res) {
 			q.resolve(res.data);
 		}, function(err) {
 			q.reject(err);

@@ -33,15 +33,15 @@
 
 	<nav class="fixed-nav-bar">
 	  <div id="menu" class="menu">
-	    <a class="sitename" href="/#/">WORKOUT LOG</a>
+	    <a class="sitename open-font" href="/#/">WORKOUT LOG</a>
 	    
 	    <a class="show" href="#menu">Menu</a><a class="hide" href="#hidemenu">Menu</a>
 
 	    <ul class="menu-items" style="float: right">
 	      <li ng-show="loggedIn"><a ng-click="main.logout()">Exit</a></li>
-	      <li ng-show="loggedIn" style="color: white">
+	      <li ng-show="loggedIn" class="white open-font">
 	      	{{loggedUser.displayName}}
-	      	<img style="border-radius: 50%; margin-left: 4px; border: solid 2px rgba(127, 140, 151, 0.78); width:30px; height:30px; vertical-align: middle" ng-src="{{loggedUser.profileImg}}" />
+	      	<img class="profile-image" ng-src="{{loggedUser.profileImg}}" />
 	      </li>
 	  	</ul>
 	  </div>

@@ -45,7 +45,7 @@ a[ui-sref]  { cursor:pointer; }
   margin-left: 10px;
 }
 a.sitename, a:visited.sitename {
-  color: #e0e0e0;
+  color: white;
 }
 .menu-items li {
   display: inline-block;
@@ -76,6 +76,7 @@ a.sitename, a:visited.sitename {
     width: 100%;
   }
   .sitename {
+    color: white;
     position: absolute;
     top: 0;
     left: 15px;
@@ -132,4 +133,21 @@ a[ui-sref]  { cursor:pointer; }
   padding: 20px 15px 16px 26px;
   border-radius: 3px;
   box-shadow: 0 3px 0 #223542;
+}
+
+.white {
+  color: white;
+}
+
+.profile-image{
+  border-radius: 50%; 
+  margin-left: 4px; 
+  border: solid 2px rgba(127, 140, 151, 0.78); 
+  width:30px; 
+  height:30px;
+  vertical-align: middle;
+}
+
+.open-font {
+  font-family: 'Open Sans', sans-serif;
 }

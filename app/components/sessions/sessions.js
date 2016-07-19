@@ -5,12 +5,14 @@ angular
 function SessionsController(Session, User, $state, $rootScope) {
 	var sessions = this;
 	$rootScope.session = {};
+	var modal = document.getElementById('modal');
 
 	sessions.save = function() {
 		$rootScope.session.athlete = $rootScope.loggedUser.userId;
 
 		Session.create($rootScope.session).then(function(){
-			alert('UHULLLL');
+			alert('Congratulations');
+			modal.style.display = "none";
 		});
 	};
 
@@ -19,13 +21,18 @@ function SessionsController(Session, User, $state, $rootScope) {
 			.then(function(data) {
 				$rootScope.types = data;
 			});
+
+		Session.all({populate: true, athlete: $rootScope.loggedUser.userId })
+			.then(function(data) {
+				$rootScope.sessions = data;
+				console.log(data);
+			});
 	}
 
 	function init() {
 		$('body').removeClass('bg');
 		// $('select').imagepicker({  hide_select: false });
-
-		var modal = document.getElementById('modal');
+		
 		var btn = document.getElementById("myBtn");
 		var span = document.getElementsByClassName("close")[0];
 
