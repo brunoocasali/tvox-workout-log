@@ -5,8 +5,7 @@ angular
 function SessionsController(Session, User, $state, $rootScope) {
 	var sessions = this;
 	var modal = document.getElementById('modal');
-
-	// bind the functions to our sessions
+	
 	sessions.save = save;
 	sessions.destroy = destroy;
 
@@ -18,28 +17,24 @@ function SessionsController(Session, User, $state, $rootScope) {
 		Session.create($rootScope.session).then(function(){
 			alert('Congratulations');
 			modal.style.display = "none";
-		});
+
+			getAll();
+		})
 	};
 
+	
 	function destroy(id){
 		Session.destroy(id).then(function(){
 			alert('Destroyed!');
-		});
 
-		$rootScope.$apply();
+			getAll();
+		});
 	};
 
-	function load() {
-		Session.allTypes()
-			.then(function(data) {
-				$rootScope.types = data;
-			});
-
-		Session.all({id: $rootScope.loggedUser.userId })
-			.then(function(data) {
-				$rootScope.session_objects = data;
-			});
-	}
+	Session.allTypes()
+		.then(function(data) {
+			$rootScope.types = data;
+		});
 
 	function init() {
 		$('body').removeClass('bg');
@@ -56,6 +51,20 @@ function SessionsController(Session, User, $state, $rootScope) {
 		}	
 	}
 
-	load();
+	function getAll(){
+		Session.all({id: $rootScope.loggedUser.userId })
+			.then(function(data) {
+				$rootScope.session_objects = data;
+				$rootScope.total = 0;
+
+				for (var i = data.length - 1; i >= 0; i--) {
+					$rootScope.total += data[i].time_spent;
+				}
+
+				$('#total').text($rootScope.total + ' hours of exercices');
+			});
+	}
+
+	getAll();
 	init();
 }

@@ -5,6 +5,7 @@ function MainController(User, $rootScope, $q, $state) {
   var main = this;
   main.logout = logout;
 
+  $rootScope.total = 0;
   $rootScope.loggedUser = {}; 
 
   User.getCurrent()

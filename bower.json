@@ -28,7 +28,6 @@
     "angular": "^1.5.7",
     "jquery": "*",
     "modernizr": "2.8.3",
-    "image-picker": "0.2.4",
     "angular-stamplay": "^0.0.2",
     "angular-ui-router": "ui-router#^0.3.1"
   }
