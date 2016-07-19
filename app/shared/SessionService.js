@@ -28,7 +28,7 @@ function SessionService($stamplay, $q, $http) {
 
       	return q.promise;
 	}
-	
+
 	function allTypes() {
 		var q = $q.defer();
 
@@ -61,32 +61,22 @@ function SessionService($stamplay, $q, $http) {
 		return def.promise;
 	}
 
-	/**
-	 * Create a session
-	 */
 	function create(data) {
 		var def = $q.defer();
 
-		// instantiate a new session model from the stamplay js sdk
-		var session = new $stamplay.Object('session').Model;		
-		
-		// loop over the fields in data and update the session
-		angular.forEach(data, function(value, key) {
-			session.set(key, value);
-		});
-		
-		// save the object
-		session.save()
-			.then(function() {
-				def.resolve(session);
-			});
+		$stamplay.Object("session")
+			.save(data)
+			.then(function(res) {
+	           def.resolve(res);
+	        })
+	        .fail(function(err) {
+	          alert('ERROR CODE ' + err.code + '. Message: ' + err.message);
+	          console.log(err);
+	        });
 
 		return def.promise;
 	}
 
-	/**
-	 * DESTROY a session
-	 */
 	function destroy(id) {
 		var q = $q.defer();
 	    

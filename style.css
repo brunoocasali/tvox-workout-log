@@ -1,3 +1,7 @@
+*, a, span, p { 
+ font-family: "Open Sans", sans-serif;
+}
+
 .fixed-nav-bar {
   position: fixed;
   top: 0;
@@ -8,6 +12,7 @@
   height: 50px;
   background-color: #00a087;
 }
+a[ui-sref]  { cursor:pointer; }
 
 /* The element at the top of the page right after the fixed navigation bar
    MUST have sufficient top margin or else it will be covered by the bar */
@@ -128,33 +133,3 @@ a[ui-sref]  { cursor:pointer; }
   border-radius: 3px;
   box-shadow: 0 3px 0 #223542;
 }
-
-ul.thumbnails.image_picker_selector {
-  overflow: auto;
-  list-style-image: none;
-  list-style-position: outside;
-  list-style-type: none;
-  padding: 0px;
-  margin: 0px; }
-  ul.thumbnails.image_picker_selector ul {
-    overflow: auto;
-    list-style-image: none;
-    list-style-position: outside;
-    list-style-type: none;
-    padding: 0px;
-    margin: 0px; }
-  ul.thumbnails.image_picker_selector li.group_title {
-    float: none; }
-  ul.thumbnails.image_picker_selector li {
-    margin: 0px 12px 12px 0px;
-    float: left; }
-    ul.thumbnails.image_picker_selector li .thumbnail {
-      padding: 6px;
-      border: 1px solid #dddddd;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none; }
-      ul.thumbnails.image_picker_selector li .thumbnail img {
-        -webkit-user-drag: none; }
-    ul.thumbnails.image_picker_selector li .thumbnail.selected {
-      background: #0088cc; }

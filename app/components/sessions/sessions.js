@@ -4,11 +4,15 @@ angular
 
 function SessionsController(Session, User, $state, $rootScope) {
 	var sessions = this;
-	
-	// return {
-	// 	init: init
-	// 	load: load
-	// }
+	$rootScope.session = {};
+
+	sessions.save = function() {
+		$rootScope.session.athlete = $rootScope.loggedUser.userId;
+
+		Session.create($rootScope.session).then(function(){
+			alert('UHULLLL');
+		});
+	};
 
 	function load() {
 		Session.allTypes()
@@ -19,7 +23,7 @@ function SessionsController(Session, User, $state, $rootScope) {
 
 	function init() {
 		$('body').removeClass('bg');
-		$('select').imagepicker({  hide_select: false });
+		// $('select').imagepicker({  hide_select: false });
 
 		var modal = document.getElementById('modal');
 		var btn = document.getElementById("myBtn");
@@ -35,6 +39,5 @@ function SessionsController(Session, User, $state, $rootScope) {
 	}
 
 	load();
-
-	setTimeout(function() { init(); }, 1000);
+	init();
 }
