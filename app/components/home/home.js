@@ -3,4 +3,5 @@ angular
 	.controller('HomeController', ['$rootScope', '$location', HomeController]);
 
 function HomeController($rootScope, $location) {
+	$('body').addClass('bg');
 }

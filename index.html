@@ -12,6 +12,7 @@
 
     <!-- CSS -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
 
 	<link rel="stylesheet" href="app/css/reset.css" /> 
 	<!-- Resource style -->
@@ -38,7 +39,6 @@
 
 	    <ul class="menu-items">
 	      <!-- verificar se está logado e não exibir -->
-	      <li ng-show="!loggedIn"><a class="" href="/auth/v1/facebook/connect">Sign Up with Facebook</a></li>
 	      <li ng-show="loggedIn"><a>{{loggedUser.displayName}}</a></li>
 	      <li ng-show="loggedIn"><a ng-click="main.logout()">Logout</a></li>
 	  	</ul>
@@ -57,7 +57,6 @@
 
 	<!-- Angular components -->
 	<script src="./app/components/home/home.js"></script>
-	<script src="./app/components/authenticate/authenticate.js"></script>
 	<script src="./app/components/sessions/sessions.js"></script>
 
 	<!-- Angular services -->
@@ -71,7 +70,6 @@
 
 	<!-- API resources -->
 	<script src="app/js/main.js"></script> 
-	
 	<script src="app/js/init.js"></script>
 </body>
 </html>

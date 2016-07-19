@@ -60,11 +60,15 @@ Main components
 
 -------------------------------- */
 header {
-  height: 200px;
-  line-height: 300px;
+  margin-top: 80px;
+  line-height: 180px;
   text-align: center;
-  background: #303e49;
 }
+
+header img {
+  height: 160px;
+}
+
 header h1 {
   color: white;
   font-size: 18px;
@@ -74,6 +78,10 @@ header h1 {
   header h1 {
     font-size: 24px;
     font-size: 1.5rem;
+  }
+
+  header img {
+    height: 280px;
   }
 }
 

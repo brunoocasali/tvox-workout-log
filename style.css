@@ -120,3 +120,9 @@ a[ui-sref]  { cursor:pointer; }
   -o-background-size: cover;
   background-size: cover;
 }
+
+.button {
+  color: white;
+  background-color: #3b5998;
+  padding: 20px 15px 20px 26px;
+}
