@@ -1,0 +1,77 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>WORKOUT LOG</title>
+
+    <!-- required by ui-router -->
+    <base href="/">
+
+    <!-- CSS -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700" />
+
+	<link rel="stylesheet" href="app/css/reset.css" /> 
+	<!-- Resource style -->
+	<link rel="stylesheet" href="app/css/timeline.css" /> 
+	<link rel="stylesheet" href="app/css/modal.css" />
+	<link rel="stylesheet" href="app/css/form.css" />
+
+	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="./bower_components/image-picker/image-picker.css">
+
+    <!-- JS -->
+    <!-- load the stamplay sdk and configure it -->
+	<script src="./bower_components/modernizr/modernizr.js"></script>
+    <script src="./bower_components/stamplay-js-sdk/dist/stamplay.min.js"></script>
+	<script> Stamplay.init('trustvox-workoutapp'); </script>
+</head>
+<body ng-app="App" ng-controller="MainController as main">
+
+	<nav class="fixed-nav-bar">
+	  <div id="menu" class="menu">
+	    <a class="sitename" href="fixed-navigation-bar.html">WORKOUT LOG</a>
+	    
+	    <a class="show" href="#menu">Menu</a><a class="hide" href="#hidemenu">Menu</a>
+
+	    <ul class="menu-items">
+	      <!-- verificar se está logado e não exibir -->
+	      <li ng-show="!currentUser"><a class="btn btn-block btn-primary" href="/auth/v1/facebook/connect" target="_blank">Sign Up with Facebook</a></li>
+	      <li ng-show="currentUser"><a>{{currentUser.displayName}}</a></li>
+	      <li ng-show="currentUser"><a ng-click="main.logout()">Logout</a></li>
+	  	</ul>
+	  </div>
+	</nav>
+
+	<div class="main-content"></div>
+	<div ui-view></div>
+
+	<!-- Other JS dependencies -->
+	<script src="./bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="./bower_components/angular/angular.min.js"></script>
+	<script src="./bower_components/angular-stamplay/angular-stamplay.js"></script>
+	<script src="./bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script src="./bower_components/image-picker/image-picker/image-picker.min.js"></script>
+
+	<!-- Angular components -->
+	<script src="./app/components/home/home.js"></script>
+	<script src="./app/components/authenticate/authenticate.js"></script>
+	<script src="./app/components/sessions/sessions.js"></script>
+
+	<!-- Angular services -->
+	<script src="./app/shared/SessionService.js"></script>
+	<script src="./app/shared/UserService.js"></script>
+	<script src="./app/shared/SportTypeService.js"></script>
+
+	<!-- Core angular app -->
+	<script src="./app/app.routes.js"></script>
+	<script src="./app/app.js"></script>
+
+	<!-- API resources -->
+	<script src="app/js/main.js"></script> 
+	
+	<script src="app/js/init.js"></script>
+</body>
+</html>

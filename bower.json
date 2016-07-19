@@ -1,0 +1,35 @@
+{
+  "name": "workout-log-app",
+  "authors": [
+    "Bruno Casali <brunoocasali@gmail.com>"
+  ],
+  "description": "A small app to show to TrustVox what I can do! :P",
+  "main": "",
+  "keywords": [
+    "workout",
+    "log",
+    "app",
+    "angular",
+    "stamplay",
+    "test"
+  ],
+  "license": "MIT",
+  "homepage": "https://trustvox-workoutapp.stamplayapp.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "stamplay-js-sdk": "^2.0.9",
+    "angular": "^1.5.7",
+    "jquery": "*",
+    "modernizr": "2.8.3",
+    "image-picker": "0.2.4",
+    "angular-stamplay": "^0.0.2",
+    "angular-ui-router": "ui-router#^0.3.1"
+  }
+}

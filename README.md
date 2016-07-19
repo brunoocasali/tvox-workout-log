@@ -14,5 +14,7 @@
  - https://icons8.com/ (icons)
  - http://sixrevisions.com/css/fixed-navigation-bar/ (navbar base)
  - http://www.w3schools.com/css/css_form.asp (forms base)
- - http://flickity.metafizzy.co (slider in select)
  - https://rvera.github.io/image-picker/ (image picker style)
+ - https://github.com/angular/angular-seed (seed angular project)
+ - https://scotch.io/tutorials/build-an-etsy-clone-with-angular-and-stamplay-part-2 (good tutorial about stamplay and angular)
+ - https://unsplash.com/photos/5rKPeFcsSTY (amazing wallpaper to home page)
