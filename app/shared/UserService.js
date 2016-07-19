@@ -3,20 +3,20 @@ angular
 	.factory('User', ['$stamplay', '$q', UserService]);
 
 function UserService($stamplay, $q) {
-	return {
-		getCurrent: getCurrent,
-		logout: logout,
+	var service = {
 		isLogged: false
 	};
 
-	function getCurrent() {
+	service.getCurrent = function() {
       var def = $q.defer();
      
       $stamplay.User.currentUser()
 	      .then(function(response) {
 	        if(response.user === undefined) {
-	          def.resolve(false);
+	          service.isLogged = false;
+	          def.reject(response);
 	        } else {
+	          service.isLogged = true;
 	          def.resolve(response.user);
 	        }
 	      }, function(error) {
@@ -26,7 +26,9 @@ function UserService($stamplay, $q) {
       return def.promise;
   	}
 
-	function logout() {
+	service.logout = function () {
 		$stamplay.User.logout();
 	}
+
+	return service;
 }

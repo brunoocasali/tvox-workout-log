@@ -1,8 +1,8 @@
 angular
 	.module('app.sessions', [])
-	.controller('SessionsController', ['Session', SessionsController]);
+	.controller('SessionsController', ['Session', 'User', SessionsController]);
 
-function SessionsController(Session) {
+function SessionsController(Session, User, $state) {
 	var sessions = this;
 
 	Session.all()

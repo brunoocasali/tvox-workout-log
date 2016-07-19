@@ -18,3 +18,4 @@
  - https://github.com/angular/angular-seed (seed angular project)
  - https://scotch.io/tutorials/build-an-etsy-clone-with-angular-and-stamplay-part-2 (good tutorial about stamplay and angular)
  - https://unsplash.com/photos/5rKPeFcsSTY (amazing wallpaper to home page)
+ - http://nicolovaligi.com/pratical-authentication-angularjs-uirouter.html

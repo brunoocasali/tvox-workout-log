@@ -1,7 +1,6 @@
 angular
 	.module('app.home', [])
-	.controller('HomeController', ['Session', '$rootScope', '$state', HomeController]);
+	.controller('HomeController', ['$rootScope', '$location', HomeController]);
 
-function HomeController(Session, $rootScope, $state) {
-	
+function HomeController($rootScope, $location) {
 }
