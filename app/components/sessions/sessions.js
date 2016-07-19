@@ -1,36 +1,40 @@
 angular
 	.module('app.sessions', [])
-	.controller('SessionsController', ['Session', 'User', SessionsController]);
+	.controller('SessionsController', ['Session', '$rootScope', 'User', '$scope', SessionsController]);
 
-function SessionsController(Session, User, $state) {
-	$('body').removeClass('bg');
-
+function SessionsController(Session, User, $state, $rootScope) {
 	var sessions = this;
+	
+	// return {
+	// 	init: init
+	// 	load: load
+	// }
 
-	Session.all()
-		.then(function(data) {
-			sessions.sessions = data.instance;
-		});
+	function load() {
+		Session.allTypes()
+			.then(function(data) {
+				$rootScope.types = data;
+			});
+	}
 
-	// Get the modal
-	var modal = document.getElementById('modal');
+	function init() {
+		$('body').removeClass('bg');
+		$('select').imagepicker({  hide_select: false });
 
-	// Get the button that opens the modal
-	var btn = document.getElementById("myBtn");
+		var modal = document.getElementById('modal');
+		var btn = document.getElementById("myBtn");
+		var span = document.getElementsByClassName("close")[0];
 
-	// Get the <span> element that closes the modal
-	var span = document.getElementsByClassName("close")[0];
+		btn.onclick = function() { modal.style.display = "block"; }
+		span.onclick = function() { modal.style.display = "none"; }
+		window.onclick = function(event) {
+		    if (event.target == modal) {
+		        modal.style.display = "none";
+		    }
+		}	
+	}
 
-	// When the user clicks on the button, open the modal 
-	btn.onclick = function() { modal.style.display = "block"; }
+	load();
 
-	// When the user clicks on <span> (x), close the modal
-	span.onclick = function() { modal.style.display = "none"; }
-
-	// When the user clicks anywhere outside of the modal, close it
-	window.onclick = function(event) {
-	    if (event.target == modal) {
-	        modal.style.display = "none";
-	    }
-	}	
+	setTimeout(function() { init(); }, 1000);
 }

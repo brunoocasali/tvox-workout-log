@@ -21,7 +21,7 @@
 	<link rel="stylesheet" href="app/css/form.css" />
 
 	<link rel="stylesheet" href="./style.css">
-	<link rel="stylesheet" href="./bower_components/image-picker/image-picker.css">
+	<!-- <link rel="stylesheet" href="./bower_components/image-picker/image-picker.css"> -->
 
     <!-- JS -->
     <!-- load the stamplay sdk and configure it -->
@@ -37,10 +37,12 @@
 	    
 	    <a class="show" href="#menu">Menu</a><a class="hide" href="#hidemenu">Menu</a>
 
-	    <ul class="menu-items">
-	      <!-- verificar se está logado e não exibir -->
-	      <li ng-show="loggedIn"><a>{{loggedUser.displayName}}</a></li>
-	      <li ng-show="loggedIn"><a ng-click="main.logout()">Logout</a></li>
+	    <ul class="menu-items" style="float: right">
+	      <li ng-show="loggedIn"><a ng-click="main.logout()">Exit</a></li>
+	      <li ng-show="loggedIn" style="color: white">
+	      	{{loggedUser.displayName}}
+	      	<img style="border-radius: 50%; margin-left: 4px; border: solid 2px rgba(127, 140, 151, 0.78); width:30px; height:30px; vertical-align: middle" ng-src="{{loggedUser.profileImg}}" />
+	      </li>
 	  	</ul>
 	  </div>
 	</nav>
@@ -62,14 +64,12 @@
 	<!-- Angular services -->
 	<script src="./app/shared/SessionService.js"></script>
 	<script src="./app/shared/UserService.js"></script>
-	<script src="./app/shared/SportTypeService.js"></script>
 
 	<!-- Core angular app -->
 	<script src="./app/app.routes.js"></script>
 	<script src="./app/app.js"></script>
 
 	<!-- API resources -->
-	<script src="app/js/main.js"></script> 
-	<script src="app/js/init.js"></script>
+	<script src="app/js/main.js"></script>
 </body>
 </html>

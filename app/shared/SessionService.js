@@ -6,6 +6,7 @@ function SessionService($stamplay, $q, $http) {
 
 	return {
 		all: all,
+		allTypes: allTypes,
 		get: get,
 		create: create,
 		destroy: destroy,
@@ -24,6 +25,20 @@ function SessionService($stamplay, $q, $http) {
 		}, function(err) {
 			q.reject(err);
 		});
+
+      	return q.promise;
+	}
+	
+	function allTypes() {
+		var q = $q.defer();
+
+		$stamplay.Object("sport_type")
+			.get({populate_owner: true })
+			.then(function(res) {
+				q.resolve(res.data);
+			}, function(err) {
+				q.reject(err);
+			});
 
       	return q.promise;
 	}

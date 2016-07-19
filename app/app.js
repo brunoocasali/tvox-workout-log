@@ -1,4 +1,4 @@
-angular.module('App', ['ngStamplay', 'ui.router', 'app.routes', 'app.sessions', 'app.home', 'UserService', 'SessionService', 'SportTypeService'])
+angular.module('App', ['ngStamplay', 'ui.router', 'app.routes', 'UserService', 'SessionService', 'app.sessions', 'app.home'])
 	   .controller('MainController', ['User', '$rootScope', '$q', '$state', MainController])
 
 function MainController(User, $rootScope, $q, $state) {
