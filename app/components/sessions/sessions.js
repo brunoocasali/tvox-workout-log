@@ -22,7 +22,7 @@ function SessionsController(Session, User, $state, $rootScope) {
 				$rootScope.types = data;
 			});
 
-		Session.all({populate: true, athlete: $rootScope.loggedUser.userId })
+		Session.all({id: $rootScope.loggedUser.userId })
 			.then(function(data) {
 				$rootScope.sessions = data;
 				console.log(data);
@@ -31,7 +31,6 @@ function SessionsController(Session, User, $state, $rootScope) {
 
 	function init() {
 		$('body').removeClass('bg');
-		// $('select').imagepicker({  hide_select: false });
 		
 		var btn = document.getElementById("myBtn");
 		var span = document.getElementsByClassName("close")[0];

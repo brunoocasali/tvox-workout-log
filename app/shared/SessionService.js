@@ -18,13 +18,17 @@ function SessionService($stamplay, $q, $http) {
 	function all(query) {
 		var q = $q.defer();
 
-		$stamplay.Object("session")
-		.get(query)
-		.then(function(res) {
-			q.resolve(res.data);
-		}, function(err) {
-			q.reject(err);
-		});
+		 $stamplay.Query("object", "session")
+		 	.equalTo("athlete", query.id)
+		 	.populate()
+		    .sortDescending("when")
+		    .exec()
+		    .then(function(res) {
+		      q.resolve(res.data);
+		    }, function(err) {
+		      q.reject(err);
+		    })
+
 
       	return q.promise;
 	}
