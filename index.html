@@ -37,7 +37,7 @@
 	  <div id="menu" class="menu">
 	    <a class="sitename open-font" href="/#/">WORKOUT LOG</a>
 	    
-	    <a class="show" href="#menu" onclick="showMenu();">Menu</a>
+	    <a class="show" ng-show="loggedIn" href="#menu" onclick="showMenu();">Menu</a>
 	    <ul class="menu-items" style="float: right">
 		  <li ng-show="loggedIn" class="white open-font">
 	      	<img class="profile-image" ng-src="{{loggedUser.profileImg}}" />
