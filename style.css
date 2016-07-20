@@ -109,12 +109,6 @@ a.sitename, a:visited.sitename {
   .hide {
     display: none;
   }
-  #menu:target .show {
-    display: none;
-  }
-  #menu:target .hide, #menu:target .menu-items {
-    display: inline-block;
-  }
 }
 
 @media only screen and (max-width: 220px) {
@@ -122,8 +116,6 @@ a.sitename, a:visited.sitename {
     font-size: 14px;
   }
 }
-
-a[ui-sref]  { cursor:pointer; }
 
 .bg { 
   background: url(app/img/bg.jpg) no-repeat center 20px fixed; 

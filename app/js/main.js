@@ -1,3 +1,13 @@
+function showMenu(){
+  var current = $(".menu-items").css('display');
+  if (current == "none") 
+  	current = "inline-block";
+  else
+  	current = "none";
+
+  $(".menu-items").css({display: current});
+}
+
 jQuery(document).ready(function($){
 	var timelineBlocks = $('.cd-timeline-block'),
 		offset = 0.8;
