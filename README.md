@@ -2,7 +2,7 @@
   <img height="240px" src="https://github.com/brunoocasali/tvox-workout-log/blob/4c95d1d1c3f8c9eca23e4f04e1903b297ab21de3/logo.png"/>
 </p>
 
-### How to install:
+### How to install: *or skip this, accessing [workoutapp.stamplayapp.com](http://workoutapp.stamplayapp.com)*
  - clone this repo.
  - `bower install`
  - `stamplay start`
