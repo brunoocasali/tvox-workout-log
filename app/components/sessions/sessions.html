@@ -31,7 +31,7 @@
 </div>
 
 <section id="cd-timeline" class="cd-container">
-	<div class="cd-timeline-block" ng-repeat="session in session_objects track by $index">
+	<div class="cd-timeline-block" ng-repeat="session in session_objects.slice().reverse()">
 		<div class="cd-timeline-img cd-{{session.type[0].image}}">
 			<img src="app/img/{{session.type[0].image}}-white.png" alt="{{session.type[0].name}}">
 		</div>
@@ -55,10 +55,17 @@
 		</div>
 	</div>
 
-
 	<div ng-hide="!session_objects.length" class="cd-timeline-block">
 		<div class="cd-timeline-content">
 			<span style="color: red">NOTHING MORE TO SHOW... #nopain #nogain</span>
+		</div>
+	</div>
+
+	<div ng-show="session_objects.length == 0" class="cd-timeline-block">
+		<div class="cd-timeline-content">
+			<span style="color: red">GO! GO! GO! #hardworkpapai</span>
+
+			<span class="cd-date">TODAY</span>
 		</div>
 	</div>
 </section>

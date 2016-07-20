@@ -226,7 +226,7 @@ header h1 {
 }
 
 @media only screen and (min-width: 1170px) {
-  .fixed-fab { display: none; }
+  /*.fixed-fab { display: none; }*/
 
   .cd-timeline-img {
     width: 60px;

@@ -21,7 +21,7 @@ function SessionService($stamplay, $q, $http) {
 		 $stamplay.Query("object", "session")
 		 	.equalTo("athlete", query.id)
 		 	.populate()
-		    .sortDescending("when")
+		    .sortAscending("when")
 		    .exec()
 		    .then(function(res) {
 		      q.resolve(res.data);
