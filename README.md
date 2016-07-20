@@ -2,10 +2,21 @@
   <img height="240px" src="https://github.com/brunoocasali/tvox-workout-log/blob/4c95d1d1c3f8c9eca23e4f04e1903b297ab21de3/logo.png"/>
 </p>
 
+### How to install:
+ - clone this repo.
+ - `bower install`
+ - `stamplay start`
+ - enjoy! :shipit:
+
+### Tests:
+ - **NO TEST, NO FEAR!** (Sorry but i can't test javascript code now).
+
 ### Technologies:
 
  - GIMP: Used to make the logo.
- - Stamplay: To host the app, and create api. 
+ - Stamplay: To host the app, and create api.
+ - Sublime: as text editor.
+ - Chrome and a Nexus 4 to test it.
 
 ### Used Resources:
 
